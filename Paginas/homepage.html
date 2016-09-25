@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script>
+	function loadXMLDoc() {
+		var xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.onreadystatechange=function() {
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				// Pegando o JSON e armazendando em uma variavel para converter em um tabale HTML
+				var jsonRestify = xmlhttp.responseText;
+				var baseDados = JSON.parse(jsonRestify);
+
+				//Criando tabela com os dados do JSON
+				var codigoHTML = "";
+				codigoHTML = "<h1>Dados na Base</h1>";
+				codigoHTML += "<table border='1'><tr><th>Numero</th><th>Departamento</th></tr>";
+				for (var i = 0; i < baseDados.restify.rowCount; i++) {
+					codigoHTML += "<tr><td>" + baseDados.restify.rows[i].values.dept_no.value + "</td>";
+					codigoHTML += "<td>" + baseDados.restify.rows[i].values.dept_name.value + "</td>";
+				}
+				codigoHTML += "</table>";
+
+				document.getElementById ("secao").innerHTML = codigoHTML;
+			}
+		}
+		xmlhttp.open("GET", "http://www.smartsoft.com.br/webservice/restifydb/Employees/departments/?_view=json&_expand=yes", true);
+		xmlhttp.send();
+	}
+
+	</script></head>
+	<body>
+		<div id="secao"><h2>Conteudo a ser alterado</h2></div>
+		<button type="button" onclick="loadXMLDoc()">Alterar</button>
+	</body>
+	</html>
