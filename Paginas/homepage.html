@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 	<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script>
 	function loadXMLDoc() {
 		var xmlhttp = new XMLHttpRequest();
@@ -12,9 +18,8 @@
 
 				//Criando tabela com os dados do JSON
 				var codigoHTML = "";
-				codigoHTML = "<h1>Dados na Base</h1>";
-				codigoHTML += "<table border='1'><tr><th>Numero</th><th>Departamento</th></tr>";
-				for (var i = 0; i < baseDados.restify.rowCount; i++) {
+				codigoHTML += "<table class='table'><tr><th>Numero</th><th>Departamento</th></tr>";
+				for (var i = 0; i < baseDados.restify.rows.length; i++) {
 					codigoHTML += "<tr><td>" + baseDados.restify.rows[i].values.dept_no.value + "</td>";
 					codigoHTML += "<td>" + baseDados.restify.rows[i].values.dept_name.value + "</td>";
 				}
@@ -27,9 +32,110 @@
 		xmlhttp.send();
 	}
 
-	</script></head>
-	<body>
-		<div id="secao"><h2>Conteudo a ser alterado</h2></div>
-		<button type="button" onclick="loadXMLDoc()">Alterar</button>
-	</body>
-	</html>
+	function addXMLDoc() {
+				codigo = document.getElementById('codigo');
+				departamento = document.getElementById('departamento');
+				if(validarCamposObrigatorios(codigo.value,departamento.value)){
+					var xmlhttp = new XMLHttpRequest();
+
+					xmlhttp.onreadystatechange=function() {
+						if (xmlhttp.readyState==4) {
+							inserirMsg('sucesso','Registro inserido com sucesso');
+							loadXMLDoc(false);
+						}
+					}
+		            xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/departments", true);
+					xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+					xmlhttp.send('_data={"dept_no": "'+codigo.value+'", "dept_name": "'+departamento.value+'"}');
+					codigo.value = '';
+					departamento.value = '';
+
+				}
+			}
+			function removeXMLDoc() {
+				codigo = document.getElementById('codigo');
+				departamento = document.getElementById('departamento');
+				if(validarCamposObrigatorios(codigo.value,departamento.value)){
+					var xmlhttp = new XMLHttpRequest();
+
+					xmlhttp.onreadystatechange=function() {
+						if (xmlhttp.readyState==4) {
+							inserirMsg('sucesso','Registro alterado com sucesso');
+							loadXMLDoc(false);
+						}
+					}
+		            xmlhttp.open("PUT", "http://www.smartsoft.com.br/webservice/restifydb/Employees/departments/"+codigo.value, true);
+					xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+					xmlhttp.send('_data={"dept_name": "'+departamento.value+'"}');
+					codigo.value = '';
+					departamento.value = '';
+
+				}
+			}
+			function alterXMLDoc(codigo) {
+				codigo = document.getElementById('codigo');
+				departamento = document.getElementById('departamento');
+				if(validarCamposObrigatorios(codigo.value)){
+					if(confirm('Deseja realmente excluir o departamento '+codigo.value)){
+						var xmlhttp = new XMLHttpRequest();
+
+						xmlhttp.onreadystatechange=function() {
+							if (xmlhttp.readyState==4) {
+								inserirMsg('sucesso','Registro Excluido com sucesso');
+								loadXMLDoc(false);
+							}
+						}
+			            xmlhttp.open("DELETE", "http://www.smartsoft.com.br/webservice/restifydb/Employees/departments/"+codigo.value, true);
+						xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+						xmlhttp.send('_data={"dept_no": "'+codigo.value+'"}');
+						codigo.value = '';
+						departamento.value = '';
+					}
+				}
+			}
+	</script>
+</head>
+<body>
+	<div id="pagina" class="container" align="center">
+		<div class="col-md-12">
+			<h2>Cadastro de Departamentos</h2><br><br>
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="input-group col-md-6">
+						<span class="input-group-addon"></span>
+						<input id="codigo" type="text" class="form-control" placeholder="Codigo" aria-describedby="basic-addon1">
+					</div><br>
+					<div class="input-group col-md-6">
+						<span class="input-group-addon"></span>
+						<input id="departamento" type="text" class="form-control" placeholder="Departamento" aria-describedby="basic-addon1">
+					</div>
+				</div>
+				<div class="row"><br>
+					<div class="btn-group" role="group" aria-label="...">
+						<button type="button" onclick="loadXMLDoc()" class="btn btn-info">Listagem</button>
+						<button type="button" onclick="addXMLDoc()" class="btn btn-success">Inserir</button>
+						<button type="button"  class="btn btn-primary" id="botaoSalvar" onclick="alterXMLDoc()">Alterar</button>
+						<button type="button" class="btn btn-danger" id="botaoSalvar" onclick="removeXMLDoc()">Excluir</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+	</div>
+
+	<div class="container" >
+		<div class="col-md-12">
+			<h2>Listagem</h2><br><br>
+			<div class="col-md-3">
+			</div>
+			<div id="secao" class="col-md-6" align="center">
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

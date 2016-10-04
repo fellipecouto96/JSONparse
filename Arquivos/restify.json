@@ -8,13 +8,148 @@
          "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/?_view=json&_expand=yes",
          "name":"Employees"
       },
-      "rowCount":9,
+      "rowCount":54,
       "start":0,
       "offset":20,
       "currentPage":1,
-      "pageCount":1,
+      "pageCount":3,
+      "nextPage":{
+         "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/?_start=20&_count=20&_expand=yes&_view=json"
+      },
+      "firstPage":{
+         "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/?_start=0&_count=20&_expand=yes&_view=json"
+      },
+      "lastPage":{
+         "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/?_start=40&_count=20&_expand=yes&_view=json"
+      },
       "ownFields":"dept_no,dept_name",
       "rows":[
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3D&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3D&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":""
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d123?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d123",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd123&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd123&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"aaaaaaa"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/4654?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"4654",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3D4654&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3D4654&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"aaa_parab&eacute;ns salgado"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/0555?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"0555",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3D0555&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3D0555&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"abc"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/1234?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"1234",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3D1234&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3D1234&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"abcd"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/123?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"123",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3D123&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3D123&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"a_123"
+               }
+            }
+         },
          {
             "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d009?_view=json&_expand=yes",
             "values":{
@@ -33,6 +168,195 @@
                },
                "dept_name":{
                   "value":"Customer Service"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d412?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d412",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd412&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd412&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Barbara"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d021?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d021",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd021&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd021&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Igor"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d030?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d030",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd030&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd030&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Rafael"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/D 02?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"D 02",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3DD+02&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3DD+02&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Renato"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d028?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d028",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd028&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd028&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Thiago Miranda"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d020?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d020",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd020&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd020&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Thiago R."
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d034?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d034",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd034&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd034&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"D Tiza"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d12?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"d12",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd12&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd12&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"da certo fei"
+               }
+            }
+         },
+         {
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/dept?_view=json&_expand=yes",
+            "values":{
+               "dept_no":{
+                  "value":"dept",
+                  "inRreferences":[
+                     {
+                        "name":"dept_emp",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Ddept&_view=json&_expand=yes"
+                     },
+                     {
+                        "name":"dept_manager",
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Ddept&_view=json&_expand=yes"
+                     }
+                  ]
+               },
+               "dept_name":{
+                  "value":"dept_name"
                }
             }
          },
@@ -58,149 +382,65 @@
             }
          },
          {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d002?_view=json&_expand=yes",
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d042?_view=json&_expand=yes",
             "values":{
                "dept_no":{
-                  "value":"d002",
+                  "value":"d042",
                   "inRreferences":[
                      {
                         "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd002&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd042&_view=json&_expand=yes"
                      },
                      {
                         "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd002&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd042&_view=json&_expand=yes"
                      }
                   ]
                },
                "dept_name":{
-                  "value":"Finance"
+                  "value":"Douglas Adams"
                }
             }
          },
          {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d003?_view=json&_expand=yes",
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d010?_view=json&_expand=yes",
             "values":{
                "dept_no":{
-                  "value":"d003",
+                  "value":"d010",
                   "inRreferences":[
                      {
                         "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd003&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd010&_view=json&_expand=yes"
                      },
                      {
                         "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd003&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd010&_view=json&_expand=yes"
                      }
                   ]
                },
                "dept_name":{
-                  "value":"Human Resources"
+                  "value":"Educa&ccedil;&atilde;o"
                }
             }
          },
          {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d001?_view=json&_expand=yes",
+            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d1?_view=json&_expand=yes",
             "values":{
                "dept_no":{
-                  "value":"d001",
+                  "value":"d1",
                   "inRreferences":[
                      {
                         "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd001&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd1&_view=json&_expand=yes"
                      },
                      {
                         "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd001&_view=json&_expand=yes"
+                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd1&_view=json&_expand=yes"
                      }
                   ]
                },
                "dept_name":{
-                  "value":"Marketing"
-               }
-            }
-         },
-         {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d004?_view=json&_expand=yes",
-            "values":{
-               "dept_no":{
-                  "value":"d004",
-                  "inRreferences":[
-                     {
-                        "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd004&_view=json&_expand=yes"
-                     },
-                     {
-                        "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd004&_view=json&_expand=yes"
-                     }
-                  ]
-               },
-               "dept_name":{
-                  "value":"Production"
-               }
-            }
-         },
-         {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d006?_view=json&_expand=yes",
-            "values":{
-               "dept_no":{
-                  "value":"d006",
-                  "inRreferences":[
-                     {
-                        "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd006&_view=json&_expand=yes"
-                     },
-                     {
-                        "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd006&_view=json&_expand=yes"
-                     }
-                  ]
-               },
-               "dept_name":{
-                  "value":"Quality Management"
-               }
-            }
-         },
-         {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d008?_view=json&_expand=yes",
-            "values":{
-               "dept_no":{
-                  "value":"d008",
-                  "inRreferences":[
-                     {
-                        "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd008&_view=json&_expand=yes"
-                     },
-                     {
-                        "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd008&_view=json&_expand=yes"
-                     }
-                  ]
-               },
-               "dept_name":{
-                  "value":"Research"
-               }
-            }
-         },
-         {
-            "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/departments\/d007?_view=json&_expand=yes",
-            "values":{
-               "dept_no":{
-                  "value":"d007",
-                  "inRreferences":[
-                     {
-                        "name":"dept_emp",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_emp\/?_filter=dept_no%3D%3Dd007&_view=json&_expand=yes"
-                     },
-                     {
-                        "name":"dept_manager",
-                        "href":"http:\/\/www.smartsoft.com.br\/webservice\/restifydb\/Employees\/dept_manager\/?_filter=dept_no%3D%3Dd007&_view=json&_expand=yes"
-                     }
-                  ]
-               },
-               "dept_name":{
-                  "value":"Sales"
+                  "value":"El Poderoso"
                }
             }
          }
